@@ -50,13 +50,18 @@ class HogwartsContainer extends Component {
     console.log("Inside handler");
     const selectedHouseNumber = parseInt(event.target.value, 10);
     this.setState({"selectedHouse": selectedHouseNumber});
-    this.fetchStudentsForSelectedHouse();
+    //this.fetchStudentsForSelectedHouse();
   };
 
   componentDidMount() {
     this.fetchStudentsForSelectedHouse();
   }
 
+  componentDidUpdate(prevProps, prevState){
+    if (prevState.selectedHouse!==this.state.selectedHouse) {
+      this.fetchStudentsForSelectedHouse();
+    }
+  }
 };
 
 export default HogwartsContainer;
