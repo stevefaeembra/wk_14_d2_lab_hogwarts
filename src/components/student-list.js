@@ -11,29 +11,18 @@ class StudentList extends Component {
     let studentItems = [];
     let studentEntries = studentsArray.map((student) => {
       return (
-        <h5>I am {student.name}</h5>
+        <div key={student.name}>I am {student.name}</div>
       )
     });
     console.dir(studentEntries);
-    //debugger;
-    // studentsArray.forEach((student) => {
-    //   console.log(`Student: ${JSON.stringify(student)}`);
-    //   let thisStudent = <div>
-    //     Name: {student.name}
-    //   </div>
-    //   studentItems.push(thisStudent);
-    // })
     return(
       <div id="studentlist">
         <div className="studentlist-header">
-          <h3>
-            Students in {houseName}
-          </h3>
-          <h4>
-            {studentEntries}
-          </h4>
+          Students in {houseName}
         </div>
-        {students}
+        <div className="studentlist--list">
+          {studentEntries}
+        </div>
       </div>
     )
   }
