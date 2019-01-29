@@ -11,7 +11,6 @@ class Student extends Component {
         <div className="student-image">
           <img src={s.image} />
         </div>
-        <hr />
       </div>
     )
   }
