@@ -14,11 +14,11 @@ class HogwartsContainer extends React.Component {
 
   render() {
     let foo = {names:["Slytherin","Hufflepuff"]};
-    debugger;
+    //debugger;
     return (
       <div>
         <Header />
-        // <HouseSelector houses={foo}/>
+        <HouseSelector houses={foo}/>
       </div>
     )
   };
