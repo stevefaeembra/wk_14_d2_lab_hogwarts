@@ -1,11 +1,13 @@
 import React from 'react';
 
 const HouseSelector = (props) => {
+  // BUG:  props is always empty
+  debugger;
   let houseItems = props.houses.names.map((name,index) => {
     return (
       <option key={index} value={index}>{name}</option>
     )
-  })
+  });
   return (
     <div id="selecthouse">
       <h2>Selecto Housenameum</h2>
@@ -13,7 +15,7 @@ const HouseSelector = (props) => {
         {houseItems}
       </select>
     </div>
-  )
+  );
 }
 
 export default HouseSelector;
