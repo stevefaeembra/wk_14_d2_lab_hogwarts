@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import HogwartsContainer from './components/house-selector';
+import HogwartsContainer from './containers/hogwarts-container';
 
 class App extends Component {
   render() {

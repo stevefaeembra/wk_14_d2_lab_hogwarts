@@ -1,9 +1,8 @@
-import React from 'react';
-import Houses from './data/houses.js'
-import HouseSelector from './components/house-selector.js';
-import Header from './components/header.js';
+import React, { Component } from 'react';
+import Houses from '../data/houses.js';
+import Header from '../components/header.js';
 
-class HogwartsContainer extends React.Component {
+class HogwartsContainer extends Component {
 
   constructor(props){
     super(props);
@@ -13,14 +12,14 @@ class HogwartsContainer extends React.Component {
   };
 
   render() {
-    let foo = {names:["Slytherin","Hufflepuff"]};
-    //debugger;
+    const foo = "Hello there";
     return (
       <div>
-        <Header />
-        <HouseSelector houses={foo}/>
+        <Header title={foo}/>
       </div>
-    )
+    );
   };
 
 };
+
+export default HogwartsContainer;
