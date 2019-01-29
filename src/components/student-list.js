@@ -9,9 +9,20 @@ class StudentList extends Component {
     let houseName = Houses.names[this.props.house];
     let studentsArray = this.props.students;
     let studentItems = [];
-    studentsArray.forEach((student) => {
-      console.log(`Student: ${JSON.stringify(student)}`);
-    })
+    let studentEntries = studentsArray.map((student) => {
+      return (
+        <h5>I am {student.name}</h5>
+      )
+    });
+    console.dir(studentEntries);
+    //debugger;
+    // studentsArray.forEach((student) => {
+    //   console.log(`Student: ${JSON.stringify(student)}`);
+    //   let thisStudent = <div>
+    //     Name: {student.name}
+    //   </div>
+    //   studentItems.push(thisStudent);
+    // })
     return(
       <div id="studentlist">
         <div className="studentlist-header">
@@ -19,7 +30,7 @@ class StudentList extends Component {
             Students in {houseName}
           </h3>
           <h4>
-            {studentsArray}
+            {studentEntries}
           </h4>
         </div>
         {students}
