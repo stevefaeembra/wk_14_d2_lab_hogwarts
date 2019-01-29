@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Houses from '../data/houses';
+import Student from './student';
 
 class StudentList extends Component {
 
@@ -11,7 +12,7 @@ class StudentList extends Component {
     let studentItems = [];
     let studentEntries = studentsArray.map((student) => {
       return (
-        <div key={student.name}>I am {student.name}</div>
+        <Student key={student.name} student={student} />
       )
     });
     console.dir(studentEntries);
