@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Houses from '../data/houses.js';
 import Header from '../components/header.js';
+import HouseSelector from "../components/house-selector.js";
 
 class HogwartsContainer extends Component {
 
@@ -12,10 +13,10 @@ class HogwartsContainer extends Component {
   };
 
   render() {
-    const foo = "Hello there";
     return (
       <div>
-        <Header title={foo}/>
+        <Header title="Hogwarts Lab"/>
+        <HouseSelector houses={Houses} />
       </div>
     );
   };
