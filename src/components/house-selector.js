@@ -8,14 +8,14 @@ class HouseSelector extends Component {
       <option
         key={index}
         value={index}
-        onChange={this.props.handleHouseSelected}>
+      >
         {name}
       </option>
       )
     });
     return (
       <div className="houses">
-        <select>
+        <select onChange={this.props.handleHouseSelected}>>
           {options}
         </select>
       </div>

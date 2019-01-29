@@ -18,7 +18,7 @@ class HogwartsContainer extends Component {
       <div>
         <Header title="Hogwarts Lab"/>
         <HouseSelector
-          handleGenerationSelected={this.handleHouseSelected}
+          handleHouseSelected={this.handleHouseSelected}
           houses={Houses}
         />
       </div>
