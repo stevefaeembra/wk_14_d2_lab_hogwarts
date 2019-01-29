@@ -38,7 +38,7 @@ class HogwartsContainer extends Component {
     request.open('GET', url);
     request.addEventListener('load', () => {
       if (request.status === 200) {
-        const jsonData = request.responseText;
+        const jsonData = JSON.parse(request.responseText);
         this.setState({studentData: jsonData});
         console.dir(jsonData);
       }
