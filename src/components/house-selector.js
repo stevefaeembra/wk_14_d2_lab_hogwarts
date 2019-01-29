@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
 class HouseSelector extends Component {
+
   render() {
     const options = this.props.houses.names.map((name, index) => {
     return (
-      <option key={index} value={index}>{name}</option>
+      <option
+        key={index}
+        value={index}
+        onChange={this.props.handleHouseSelected}>
+        {name}
+      </option>
       )
     });
     return (

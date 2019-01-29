@@ -10,15 +10,24 @@ class HogwartsContainer extends Component {
     this.state = {
       selectedHouse: ""
     };
+    this.handleHouseSelected = this.handleHouseSelected.bind(this);
   };
 
   render() {
     return (
       <div>
         <Header title="Hogwarts Lab"/>
-        <HouseSelector houses={Houses} />
+        <HouseSelector
+          handleGenerationSelected={this.handleHouseSelected}
+          houses={Houses}
+        />
       </div>
     );
+  };
+
+  handleHouseSelected(event) {
+    console.log("Inside handler");
+    debugger;
   };
 
 };
